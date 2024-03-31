@@ -35,9 +35,7 @@ public class Main extends JFrame {
 	private JTextField adjectivesField;	
 	private JTextField namesField;
 
-	/**
-	 * Launch the application.
-	 */
+	//Launch the application
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -51,9 +49,7 @@ public class Main extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+	//Create the frame
 	public Main() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 510, 200);
@@ -63,7 +59,7 @@ public class Main extends JFrame {
 		//Content pane for text fields and buttons
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+		//JTextFields to take user input
 		nounsField = new JTextField();
 		nounsField.setBounds(10, 47, 86, 20);
 		contentPane.add(nounsField);
@@ -88,7 +84,7 @@ public class Main extends JFrame {
 		namesField.setColumns(10);
 		namesField.setBounds(394, 47, 86, 20);
 		contentPane.add(namesField);
-		
+		//JLabels for JTextFields
 		JLabel nounLabel = new JLabel("Nouns");
 		nounLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		nounLabel.setBounds(10, 22, 86, 20);
