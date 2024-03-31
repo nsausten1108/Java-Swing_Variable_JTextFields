@@ -29,8 +29,22 @@ public class WordInputs extends JFrame {
      * Create the frame.
      */
     public WordInputs(Main mainInstance) {
+        //Creates array to analyze which of the user inputs is larger, then passes this value to a max
+        //variable so that the window can scale with the greatest input
+        int [] numArray = {mainInstance.getNouns(), mainInstance.getVerbs(), mainInstance.getAdverbs(),
+    		mainInstance.getAdjectives(), mainInstance.getNames()};
+    	
+    	int max = numArray[0];
+    	
+    	for (int i = 1; i < numArray.length; i++) {
+    		if (numArray[i] > max) {
+    			max = numArray[i];
+    		}
+    	}
+        
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 551, (400 + (mainInstance.getAdverbs() * 20)));
+        setBounds(100, 100, 551, (400 + (max * 20)));
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
